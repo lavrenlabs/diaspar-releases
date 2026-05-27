@@ -1,0 +1,78 @@
+Diaspar License
+================
+
+Copyright (c) 2026 Lavren Labs. All rights reserved.
+
+The "Software" referred to below is the Diaspar binary and the
+release artifacts that accompany it (checksums, signatures,
+release notes) as published at:
+
+    https://github.com/lavrenlabs/diaspar-releases
+
+For licensing questions, contact: security@lavren.dev
+
+----------------------------------------------------------------
+
+PERMITTED USES
+
+Subject to the conditions below, permission is granted to any
+individual or organization to:
+
+  1. Use the Software, free of charge, for any purpose —
+     personal, commercial, internal, or otherwise — for as long
+     as desired.
+
+  2. Redistribute the Software in unmodified form, including
+     all original release artifacts, provided that this license
+     text accompanies any such redistribution.
+
+PROHIBITED USES
+
+The following are NOT granted by this license:
+
+  1. Modifying the Software, decompiling it, disassembling it,
+     reverse-engineering it, or creating derivative works from
+     it, in whole or in part.
+
+  2. Redistributing modified or derivative versions of the
+     Software in any form.
+
+  3. Removing, altering, or obscuring this license text, any
+     copyright notices, or attribution included with the
+     Software.
+
+  4. Using the names "Diaspar" or "Lavren Labs", any logo or
+     visual identity associated with them, or any confusingly
+     similar mark in a way that implies endorsement by, or
+     affiliation with, Lavren Labs without prior written
+     permission.
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT.
+
+LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL LAVREN LABS BE LIABLE FOR ANY CLAIM, DAMAGES,
+OR OTHER LIABILITY — WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE — ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+SOFTWARE OR ITS USE OR DEALINGS WITH IT, INCLUDING WITHOUT
+LIMITATION LOSS OF DATA, LOSS OF PROFITS, BUSINESS INTERRUPTION,
+OR ANY OTHER COMMERCIAL OR INCIDENTAL DAMAGES.
+
+----------------------------------------------------------------
+
+QUESTIONS AND CONTACT
+
+For questions about this license, or to request permission for
+something not covered above (for example, redistribution with
+modifications for an internal compliance fork), contact
+security@lavren.dev.
+
+----------------------------------------------------------------
+
+This file is the canonical text. It is mirrored on the website
+at https://diaspar.dev/license. Keep both copies in sync.
