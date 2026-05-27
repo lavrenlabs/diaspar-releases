@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/lavrenlabs/diaspar-releases/security/advisories/new
+    about: Use a private advisory for suspected vulnerabilities. Do not open a public issue.
+  - name: Security and contact policy
+    url: https://diaspar.dev/security
+    about: Use email for security, privacy, license, or redistribution questions.
+  - name: Diaspar documentation
+    url: https://diaspar.dev/docs/
+    about: Read installation, setup, and usage documentation.
