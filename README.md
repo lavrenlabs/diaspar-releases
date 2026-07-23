@@ -54,7 +54,9 @@ Quickstart: <https://diaspar.dev/docs/getting-started/> · MCP tool reference: <
 
 ## Verify a download
 
-Every release publishes `checksums.txt` (a SHA-256 for each artifact) and `checksums.txt.sig`, an RSA-4096 signature over that file produced by the release pipeline.
+Releases **from v3.4.1 onward** publish `checksums.txt` (a SHA-256 for each artifact) and `checksums.txt.sig`, an RSA-4096 signature over that file produced by the release pipeline.
+
+> **Which releases this applies to.** v3.4.1 is the first release built by the signed-evidence pipeline. **v3.4.0 and earlier publish `checksums.txt` and the platform archives only** — no `checksums.txt.sig` and no evidence bundle. Step 2 below cannot be completed against them — there is no `.sig` file to verify — so only step 3, the plain checksum comparison, applies. Use a current release if you need a verifiable signature.
 
 **Verify the signature first, then the archive.** A checksum file you have not authenticated proves nothing on its own.
 
@@ -130,20 +132,21 @@ Full trust statement: <https://diaspar.dev/security/>.
 
 ## Release contents
 
-Alongside the six platform archives, each release publishes:
+Every release publishes six platform archives and `checksums.txt`. Releases **from v3.4.1 onward** additionally publish the signature and the evidence bundle:
 
-| Asset | What it is |
-|---|---|
-| `checksums.txt` | SHA-256 for every archive and every evidence file below. |
-| `checksums.txt.sig` | RSA-4096 signature over `checksums.txt`. |
-| `release-manifest.json` | Product, version, source commit and tag, and each archive's hash and size. |
-| `release-evidence.json` | Index of every published file with its hash, plus build and toolchain provenance. |
-| `sbom.cdx.json` | CycloneDX software bill of materials. |
-| `sbom.spdx.json` | SPDX software bill of materials. |
-| `govulncheck.json` | Go vulnerability scan report. |
-| `security-scan.json` | Secret-scan report. |
+| Asset | Since | What it is |
+|---|---|---|
+| `diaspar_<os>_<arch>.<ext>` | all | Six platform archives. |
+| `checksums.txt` | all | SHA-256 for every archive, and for every evidence file below when present. |
+| `checksums.txt.sig` | v3.4.1 | RSA-4096 signature over `checksums.txt`. |
+| `release-manifest.json` | v3.4.1 | Product, version, source commit and tag, and each archive's hash and size. |
+| `release-evidence.json` | v3.4.1 | Index of every published file with its hash, plus build and toolchain provenance. |
+| `sbom.cdx.json` | v3.4.1 | CycloneDX software bill of materials. |
+| `sbom.spdx.json` | v3.4.1 | SPDX software bill of materials. |
+| `govulncheck.json` | v3.4.1 | Go vulnerability scan report. |
+| `security-scan.json` | v3.4.1 | Secret-scan report. |
 
-Every one of these is covered by `checksums.txt`, so verifying the signature covers the whole evidence bundle. The release pipeline verifies each artifact hash and the signature **before** it publishes anything — to this repository, to the Homebrew tap, or to the Scoop bucket. A failed verification publishes nothing.
+On releases that carry them, every one of these files is covered by `checksums.txt`, so verifying the signature covers the whole evidence bundle. The release pipeline verifies each artifact hash and the signature **before** it publishes anything — to this repository, to the Homebrew tap, or to the Scoop bucket. A failed verification publishes nothing.
 
 ## Support
 
